@@ -7,7 +7,7 @@ Instead, write your own implementation and put it in a repository you can trust.
 
 ## Usage
 ```bash
-npx credebug@0.0.1 --test='t' foo bar --baz --qux=quux --oopsIputMyPass0rdHere='t' --asv00124 --a --b --c=c --d d
+npx credebug --test='t' foo bar --baz --qux=quux --oopsIputMyPass0rdHere='t' --asv00124 --a --b --c=c --d d
 
 test: ***
 ***
