@@ -1,0 +1,29 @@
+{
+  "name": "credebug",
+  "version": "0.0.1",
+  "description": "CLI to check if some credential value is defined or not. Not safe for production usage",
+  "main": "./src/main/js/cli.min.js",
+  "bin": "./src/main/js/cli.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm_config_yes=true npx terser ./src/main/js/cli.js -o ./src/main/js/cli.min.js --compress --mangle"
+  },
+  "files": [
+    "src/main/js/cli.min.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antongolub/credebug.git"
+  },
+  "keywords": [
+    "credentials",
+    "creds",
+    "debug"
+  ],
+  "author": "Anton Golub <antongolub@antongolub.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antongolub/credebug/issues"
+  },
+  "homepage": "https://github.com/antongolub/credebug#readme"
+}
