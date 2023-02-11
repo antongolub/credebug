@@ -48,3 +48,11 @@ B: ***
 C: <empty>
 `))
 })
+
+test('cli.min.js works fine too', () => {
+  const {stdout: output1} = cp.spawnSync('node', ['./src/main/js/cli.min.js'], {env: {PATH: process.env.PATH, A: 'a'}})
+  const {stdout: output2} = cp.spawnSync('node', ['./src/main/js/cli.min.js', '--test=t', 'foo', '--bar', 'baz', '--passW0rd!'])
+
+  assert.ok(output1.toString().includes(`A: ***`))
+  assert.ok(output2.toString().includes(`test: ***`))
+})

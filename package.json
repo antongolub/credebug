@@ -7,7 +7,7 @@
     "credebug": "./src/main/js/cli.min.js"
   },
   "scripts": {
-    "test": "node src/test/js/cli.test.js",
+    "test": "npm_config_yes=true npx c8 node src/test/js/cli.test.js",
     "build": "npm_config_yes=true npx terser ./src/main/js/cli.js -o ./src/main/js/cli.min.js --compress --mangle"
   },
   "files": [
