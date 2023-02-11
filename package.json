@@ -1,6 +1,6 @@
 {
   "name": "credebug",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "CLI to check if some credential value is defined or not. Not safe for production usage",
   "main": "./src/main/js/cli.min.js",
   "bin": {

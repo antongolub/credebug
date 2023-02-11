@@ -1,3 +1,8 @@
+## [1.1.0](https://github.com/antongolub/credebug/compare/v1.0.1...v1.1.0) (2023-02-11)
+
+### Features
+* feat: set error code if some target option is undefined ([cef5ec3](https://github.com/antongolub/credebug/commit/cef5ec382b1edb3397872610c55efbb82c82deac))
+
 ## [1.0.1](https://github.com/antongolub/credebug/compare/v1.0.0...v1.0.1) (2023-02-11)
 
 ### Fixes & improvements
