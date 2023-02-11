@@ -1,3 +1,8 @@
+## [1.0.1](https://github.com/antongolub/credebug/compare/v1.0.0...v1.0.1) (2023-02-11)
+
+### Fixes & improvements
+* docs: mention env vars debugger ([78af87a](https://github.com/antongolub/credebug/commit/78af87a0692efb96879667b9f3313e95b4f81d7c))
+
 ## [1.0.0](https://github.com/antongolub/credebug/compare/undefined...v1.0.0) (2023-02-11)
 
 ### Fixes & improvements
@@ -8,5 +13,3 @@
 ### Features
 * feat: print env digest if no option is passed ([01a832c](https://github.com/antongolub/credebug/commit/01a832c80559b9b52dc7604160b2d7aa1afeadbc))
 * feat: add impl draft ([f7ef7c6](https://github.com/antongolub/credebug/commit/f7ef7c6d91c178afe2b0c256d7b714b67382cfd3))
-
-
