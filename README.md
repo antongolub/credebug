@@ -1,4 +1,9 @@
 # credebug
+
+[![Release](https://github.com/antongolub/credebug/workflows/CI/badge.svg)](https://github.com/antongolub/credebug/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/150b4d4d62cea4bd3266/maintainability)](https://codeclimate.com/github/antongolub/credebug/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/150b4d4d62cea4bd3266/test_coverage)](https://codeclimate.com/github/antongolub/credebug/test_coverage)
+
 CLI to check if some credential value is defined or not
 
 Strange things happen sometimes. You're using a tool that relies on environment variables and cred arguments, but doesn't assert them, and falls apart for no reason. This snippet helps to debug misconfiguration.
