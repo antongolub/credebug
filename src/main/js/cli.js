@@ -20,11 +20,18 @@ if (!entries.length) {
   entries = Object.entries(process.env)
 }
 
+let status = 0
+
 const result = entries.reduce((acc, [key, value]) => {
   const _value = value ? '***' : '<empty>'
   const _key = /^[a-zA-Z_]+$/.test(key) ? key : '***'
+
+  if (!value) {
+    status = 1
+  }
 
   return `${acc}\n${_key}: ${_value}`
 }, '')
 
 console.log(result)
+process.exit(status)

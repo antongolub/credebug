@@ -49,6 +49,14 @@ C: <empty>
 `))
 })
 
+test('CLI works like assert: if some option is undefined it sets error code', () => {
+  const {status: status1} = cp.spawnSync('node', ['./src/main/js/cli.js', '--foo=bar'])
+  const {status: status2} = cp.spawnSync('node', ['./src/main/js/cli.js', '--foo='])
+
+  assert.equal(status1, 0)
+  assert.equal(status2, 1)
+})
+
 test('cli.min.js works fine too', () => {
   const {stdout: output1} = cp.spawnSync('node', ['./src/main/js/cli.min.js'], {env: {PATH: process.env.PATH, A: 'a'}})
   const {stdout: output2} = cp.spawnSync('node', ['./src/main/js/cli.min.js', '--test=t', 'foo', '--bar', 'baz', '--passW0rd!'])
