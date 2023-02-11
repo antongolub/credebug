@@ -2,9 +2,9 @@ const assert = require('node:assert')
 const test = require('node:test')
 const cp = require('node:child_process')
 
-test('CLI outputs masked values', () => {
+test('CLI prints masked options if any', () => {
   const {stdout} = cp.spawnSync('node', [
-    './src/main/js/cli.min.js',
+    './src/main/js/cli.js',
     '--test=\'t\'',
     'foo',
     'bar',
@@ -30,4 +30,21 @@ b: <empty>
 c: ***
 d: ***
 `)
+})
+
+test('CLI captures env variables otherwise', () => {
+  const {stdout} = cp.spawnSync('node', ['./src/main/js/cli.js'], {
+    env: {
+      PATH: process.env.PATH,
+      A: 'a',
+      B: 'b',
+      C: ''
+    }
+  })
+
+  assert.ok(stdout.toString().includes(`
+A: ***
+B: ***
+C: <empty>
+`))
 })
